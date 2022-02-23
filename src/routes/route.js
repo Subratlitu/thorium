@@ -36,10 +36,42 @@ router.get('/film/:filmId', function(req, res) {
             res.send(movi[i])
             break;
         }
+        else{
+            res.send("no movie available for this id")
+        }
     }
         
 })
+//5
+router.get('/sol1', function(req, res) {
+    let arr=[1,2,3,5,6,7]
+    let misNumber
+   let sum=7*(7+1)/2
+   let arrSum=0
+   for(let i=0;i<arr.length;i++){
+       arrSum=arrSum+arr[i];
 
+   }
+   misNumber=sum-arrSum;
+    
+    res.send({data:misNumber})
+        
+})
+//6
+router.get('/sol2', function(req, res) {
+    let arr1=[33, 34, 35, 37, 38]
+    let missNumber
+   let sum1=6*(33+38)/2
+   let arr1Sum=0
+   for(let i=0;i<arr1.length;i++){
+       arr1Sum=arr1Sum+arr1[i];
+
+   }
+   missNumber=sum1-arr1Sum;
+    
+    res.send({data:missNumber})
+        
+})
 
 
 
